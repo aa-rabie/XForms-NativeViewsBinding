@@ -15,3 +15,4 @@
 /Users/ahmed/Projects/NativeViewBindingSample/NativeViewBindingSample/obj/Debug/NativeViewBindingSample.NativeViewBindingSamplePage.xaml.g.cs
 /Users/ahmed/Projects/NativeViewBindingSample/NativeViewBindingSample/obj/Debug/NativeViewBindingSample.dll
 /Users/ahmed/Projects/NativeViewBindingSample/NativeViewBindingSample/obj/Debug/NativeViewBindingSample.pdb
+/Users/ahmed/Projects/NativeViewBindingSample/NativeViewBindingSample/obj/Debug/NativeViewBindingSample.csprojResolveAssemblyReference.cache

@@ -4,16 +4,22 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using NativeViewBindingSample.Interfaces.Charts;
+using Xamarin.Forms;
 
 namespace NativeViewBindingSample
 {
 	public class SampleViewModel : INotifyPropertyChanged
 	{
 		private List<BarChartDataEntry> dataItems;
+        private string message;
 		public SampleViewModel()
 		{
+            Message = "Tap on Chart";
 			dataItems = new List<BarChartDataEntry>();
 			LoadData();
+            TapCmd = new Command<Point>( (p) => {
+                Message = $"you clicked at ({p.X.ToString("####")} , {p.Y.ToString("####")})";
+            });
 		}
 		void LoadData() {
 			dataItems = new List<BarChartDataEntry>() {
@@ -36,8 +42,22 @@ namespace NativeViewBindingSample
 
 		}
 
+        public Command<Point> TapCmd { get; set; }
         public string ChartLabel{
             get { return "Sample Native BarChart"; }
         }
+
+		public string Message
+		{
+            get { return message; }
+            set 
+            { 
+                if(value != message){
+                    message = value;
+                    OnPropertyChanged(nameof(Message));
+                } 
+            }
+		}
+
 	}
 }

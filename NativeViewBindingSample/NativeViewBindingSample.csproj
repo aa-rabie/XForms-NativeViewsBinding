@@ -42,6 +42,7 @@
     <Compile Include="ViewModels\SampleViewModel.cs" />
     <Compile Include="Interfaces\Charts\IBarChartDataEntry.cs" />
     <Compile Include="Models\Charts\BarChartDataEntry.cs" />
+    <Compile Include="Models\Charts\Point.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

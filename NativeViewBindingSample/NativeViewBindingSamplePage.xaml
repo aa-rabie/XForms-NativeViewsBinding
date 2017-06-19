@@ -4,9 +4,12 @@ xmlns:androidLocal="clr-namespace:NativeViewBindingSample.Droid;assembly=NativeV
     xmlns:android="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
         xmlns:formsAndroid="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
         >
-    
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+    <StackLayout>
+	<Label Text="{Binding Message}" VerticalOptions="Start" HorizontalOptions="Center" />
     <androidLocal:DroidBarChart x:Arguments="{x:Static formsAndroid:Forms.Context}"
             ItemsSource="{Binding DataItems}"
-            Label="{Binding ChartLabel}" />
+            Label="{Binding ChartLabel}"
+        View.VerticalOptions="FillAndExpand" 
+        TapCommand="{Binding TapCmd}"/>
+    </StackLayout>
 </ContentPage>
